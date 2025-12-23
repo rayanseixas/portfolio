@@ -8,7 +8,7 @@ import { SparklesIcon } from "../icons/sparkles";
 
 export default function Header() {
     return(
-        <div className="flex border-b border-border h-12 items-center px-4 md:px-8">
+        <div className="flex border-b border-border h-12 items-center px-4 md:px-inner-md">
             <div className="text-text-headline flex-1">saynex</div>
             <ul className="gap-3 text-text-headline hidden lg:flex flex-1 justify-center items-center">
                <NavigationItem href="/" active>Home</NavigationItem>

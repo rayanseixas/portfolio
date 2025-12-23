@@ -35,7 +35,7 @@ export default function RootLayout({
         <main className="border-border border w-full h-full flex flex-col">
           <Header />
           <PageIndicator />
-          <section className="px-4 pt-8 md:px-8 overflow-auto">{children}</section>
+          <section className="py-inner-md px-inner-md overflow-auto">{children}</section>
         </main>
         <Footer />
       </body>

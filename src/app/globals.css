@@ -44,6 +44,11 @@
   /* Text */
   --color-text-body: var(--primary-150);
   --color-text-headline: var(--color-white-500);
+
+  /* spacing */
+  --spacing-inner-md: 20px;
+  --spacing-inner-lg: 32px;
+  --spacing-inner-xl: 40px;
 }
 
 body {
