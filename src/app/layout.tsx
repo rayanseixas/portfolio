@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../compenents/header";
 import PageIndicator from "../compenents/page-indicator";
 import Footer from "../compenents/footer";
+import Navigation from "../compenents/navigation.tsx";
 
 const inter = Inter({
   variable: '--font-primary',
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <main className="border-border border w-full h-full flex flex-col">
           <Header />
+          {/* <Navigation /> */}
           <PageIndicator />
           <section className="py-inner-md px-inner-md overflow-auto">{children}</section>
         </main>
