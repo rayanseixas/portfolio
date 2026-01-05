@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk  } from "next/font/google";
 import "./globals.css";
-import Header from "../compenents/header";
 import PageIndicator from "../compenents/page-indicator";
-import Footer from "../compenents/footer";
-import Navigation from "../compenents/navigation.tsx";
+import Footer from "../compenents/footer";import NavigationMobile from "../compenents/navigation-mobile";
+import ClientLayout from "../compenents/client-layout";
 
 const inter = Inter({
   variable: '--font-primary',
@@ -34,10 +33,9 @@ export default function RootLayout({
         className={`w-screen h-screen p-4 flex flex-col gap-3 pb-2 ${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <main className="border-border border w-full h-full flex flex-col">
-          <Header />
-          {/* <Navigation /> */}
-          <PageIndicator />
-          <section className="py-inner-md px-inner-md overflow-auto">{children}</section>
+            <ClientLayout />
+            <PageIndicator />
+            <section className=" overflow-auto">{children}</section>
         </main>
         <Footer />
       </body>

@@ -44,6 +44,7 @@
   /* Text */
   --color-text-body: var(--primary-150);
   --color-text-headline: var(--color-white-500);
+  --color-text-on-action: var(--color-gray-700);
 
   /* spacing */
   --spacing-inner-md: 20px;
