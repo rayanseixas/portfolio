@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk  } from "next/font/google";
+import { Inter, Crimson_Text, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import PageIndicator from "../compenents/page-indicator";
 import Footer from "../compenents/footer";import NavigationMobile from "../compenents/navigation-mobile";
 import ClientLayout from "../compenents/client-layout";
 
-const inter = Inter({
+const primary = Inter({
   variable: '--font-primary',
   subsets: ["latin"],
     display: 'swap',
 });
 
-const spaceGrotesk = Space_Grotesk({
+const secondary = Libre_Baskerville({
+  weight: '400',
   variable: '--font-secondary',
   subsets: ["latin"],
     display: 'swap',
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`w-screen h-screen p-4 flex flex-col gap-3 pb-2 ${inter.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`w-screen h-screen p-4 flex flex-col gap-3 pb-2 ${primary.variable} ${secondary.variable} antialiased`}
       >
         <main className="border-border border w-full h-full flex flex-col">
             <ClientLayout />

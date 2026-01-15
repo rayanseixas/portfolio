@@ -7,7 +7,7 @@ export default function PageIndicator() {
     const segments = pathname.split('/').filter(Boolean);
     const pageName = 
         segments.length === 0 
-        ? 'Home' 
+        ? 'Trabalhos' 
         : segments[segments.length -1].charAt(0).toUpperCase() + segments[segments.length -1].slice(1);
 
     return (

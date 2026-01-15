@@ -4,13 +4,13 @@ import Filterbutton from "../compenents/filter-button";
 export default function Home() {
   return (
     <div className="flex flex-col gap-5">
-      <div className="border-b border-border border-dashed px-inner-md py-inner-md flex">
+      <div className="border-b border-border border-dashed px-inner-md py-inner-xl flex">
         <div className="flex flex-col flex-1 gap-2.5">
-          <p className="text-text-headline uppercase">Total</p>
-          <p className="text-text-body font-secondary">(2 projetos)</p>
+          {/* <p className="text-text-headline uppercase">Total</p> */}
+          <p className="text-text-body font-medium font-primary">(Filtros)</p>
         </div>
         <div className="flex flex-col flex-1 gap-2.5 items-start">
-          <p className="text-text-headline uppercase">Filtros</p>
+          {/* <p className="text-text-headline uppercase">Filtros</p> */}
           <div className="flex gap-3 ">
             <Filterbutton active>Todos</Filterbutton>
             <Filterbutton>IA</Filterbutton>
@@ -22,8 +22,6 @@ export default function Home() {
         <CardCase />
         <CardCase />
         <CardCase />
-        <CardCase />
-        
       </div>
     </div>
   );
