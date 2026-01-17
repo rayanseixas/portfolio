@@ -11,7 +11,7 @@ const primary = Inter({
     display: 'swap',
 });
 
-const secondary = Libre_Baskerville({
+const secondary = Crimson_Text({
   weight: '400',
   variable: '--font-secondary',
   subsets: ["latin"],
