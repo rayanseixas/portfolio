@@ -20,6 +20,7 @@
 @theme {
   --font-primary: var(--font-primary);
   --font-secondary: var(--font-secondary);
+  --font-tertiary: var(--font-tertiary);
 
   /* Border */
   --color-border: var(--color-gray-500);

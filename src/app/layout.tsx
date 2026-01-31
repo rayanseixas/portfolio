@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Crimson_Text, Libre_Baskerville } from "next/font/google";
+import { Inter, Crimson_Text, Libre_Baskerville , Source_Serif_4, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import PageIndicator from "../compenents/page-indicator";
 import Footer from "../compenents/footer";import NavigationMobile from "../compenents/navigation-mobile";
@@ -11,9 +11,16 @@ const primary = Inter({
     display: 'swap',
 });
 
-const secondary = Crimson_Text({
+const secondary = Source_Serif_4({
   weight: '400',
   variable: '--font-secondary',
+  subsets: ["latin"],
+    display: 'swap',
+});
+
+const tertiary = Playfair_Display({
+  weight: '400',
+  variable: '--font-tertiary',
   subsets: ["latin"],
     display: 'swap',
 });
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`w-screen h-screen p-4 flex flex-col gap-3 pb-2 ${primary.variable} ${secondary.variable} antialiased`}
+        className={`w-screen h-screen p-4 flex flex-col gap-3 pb-2 ${primary.variable} ${secondary.variable} ${tertiary.variable} antialiased`}
       >
         <main className="border-border border w-full h-full flex flex-col">
             <ClientLayout />

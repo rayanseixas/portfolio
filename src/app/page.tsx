@@ -1,10 +1,11 @@
 import CardCase from "../compenents/card-case";
+import { DialogScrollableContent } from "../compenents/dialog";
 import Filterbutton from "../compenents/filter-button";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-5">
-      <div className="border-b border-border border-dashed px-inner-md py-inner-xl flex">
+      <div className="border-b border-border border-dashed px-inner-md py-inner-xl flex items-center">
         <div className="flex flex-col flex-1 gap-2.5">
           {/* <p className="text-text-headline uppercase">Total</p> */}
           <p className="text-text-body font-medium font-primary">(Filtros)</p>
@@ -22,6 +23,7 @@ export default function Home() {
         <CardCase />
         <CardCase />
         <CardCase />
+        <DialogScrollableContent />
       </div>
     </div>
   );
