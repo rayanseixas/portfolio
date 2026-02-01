@@ -38,7 +38,7 @@
   --primary-800: var(--color-gray-800);
 
   /* Suface */
-  --color-surface-default: var(--color-gray-700);
+  --color-surface-default: var(--color-gray-800);
   --color-surface-active: var(--color-white-500);
   --color-surface-subtle-hover: var(--color-gray-600);
   --color-surface-subtle-active: var(--color-gray-600);
