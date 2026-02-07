@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Crimson_Text, Libre_Baskerville , Source_Serif_4, Playfair_Display } from "next/font/google";
+import { Inter, Source_Serif_4, Playfair_Display, Open_Sans, Ibarra_Real_Nova } from "next/font/google";
 import "./globals.css";
 import PageIndicator from "../compenents/page-indicator";
 import Footer from "../compenents/footer";import NavigationMobile from "../compenents/navigation-mobile";
 import ClientLayout from "../compenents/client-layout";
+import localFont from "next/font/local";
 
 const primary = Inter({
   variable: '--font-primary',
@@ -11,19 +12,26 @@ const primary = Inter({
     display: 'swap',
 });
 
-const secondary = Source_Serif_4({
+const secondary = Open_Sans({
   weight: '400',
   variable: '--font-secondary',
   subsets: ["latin"],
     display: 'swap',
 });
 
-const tertiary = Playfair_Display({
-  weight: '400',
+// const tertiary = Ibarra_Real_Nova({
+//   weight: '400',
+//   variable: '--font-tertiary',
+//   subsets: ["latin"],
+//     display: 'swap',
+// });
+
+const tertiary = localFont({
+  src: [
+    { path: '../assets/fonts/Dauphin.ttf', weight: '400', style: 'normal' }, ],
   variable: '--font-tertiary',
-  subsets: ["latin"],
-    display: 'swap',
-});
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Portfólio",
