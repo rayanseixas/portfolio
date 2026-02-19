@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import Button from '@/src/compenents/button';
+import { CornerUpLeftIcon } from '../icons/corner-up-left';
 
 const ROUTE_LABELS: Record<string, string> = {
   '/': 'Home',
-  '/craft': 'Craft',
+  '/cases': 'Cases',
   '/contato': 'Contato',
   '/sobre': 'Sobre',
 };
@@ -30,8 +31,8 @@ function formatLabel(raw: string): string {
 }
 
 /**
- * Botão padrão para artigos em /craft: volta para a página anterior (history.back).
- * Exibe o nome da página de origem (ex: "Craft" se veio de /craft).
+ * Botão padrão para artigos em /cases: volta para a página anterior (history.back).
+ * Exibe o nome da página de origem (ex: "Cases" se veio de /cases).
  * Deve ser posicionado fixo à esquerda do título, alinhado ao topo.
  */
 export default function ArticleBackButton() {
@@ -48,10 +49,10 @@ export default function ArticleBackButton() {
       variant="ghost"
       size="md"
       iconPosition="left"
-      icon={<ArrowLeft className="text-[var(--color-text-headline)]" size={20} />}
+      icon={<CornerUpLeftIcon className="text-[var(--color-text-headline)]" size={20} />}
       onClick={() => router.back()}
       aria-label={`Voltar para ${label}`}
-      className="fixed left-5 top-[3.75rem] z-10"
+      className="fixed left-24 top-[3.75rem] z-10"
     >
       {label}
     </Button>

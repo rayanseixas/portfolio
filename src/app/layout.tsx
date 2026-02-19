@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 function isCleanArticleRoute(pathname: string): boolean {
-  return Boolean(pathname.match(/^\/craft\/[^/]+$/));
+  return Boolean(pathname.match(/^\/cases\/[^/]+$/));
 }
 
 export default async function RootLayout({

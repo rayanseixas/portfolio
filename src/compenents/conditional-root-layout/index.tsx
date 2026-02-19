@@ -7,8 +7,8 @@ import Footer from '../footer';
 import PageIndicator from '../page-indicator';
 
 function isCleanArticleRoute(pathname: string): boolean {
-  // /craft/artigo-01, /craft/nome-do-arquivo, etc. (um segmento após /craft/)
-  const match = pathname.match(/^\/craft\/[^/]+$/);
+  // /cases/artigo-01, /cases/nome-do-arquivo, etc. (um segmento após /cases/)
+  const match = pathname.match(/^\/cases\/[^/]+$/);
   return Boolean(match);
 }
 

@@ -18,8 +18,8 @@ export default function Home() {
         </div>
       </div>
       <div className="px-inner-md flex w-full flex-wrap gap-5">
-        <CardCase link={'/craft/teste'} />
-        <CardCase link={'/craft/artigo-01'} />
+        <CardCase link={'/cases/teste'} />
+        <CardCase link={'/cases/artigo-01'} />
       </div>
     </div>
   );
