@@ -1,22 +1,19 @@
-import { FlatCompat } from '@eslint/eslintrc';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import pluginQuery from '@tanstack/eslint-plugin-query';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import importHelpersPlugin from 'eslint-plugin-import-helpers';
+import prettierPlugin from 'eslint-plugin-prettier';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [
-  ...compat.config({
-    extends: [
-      'next/core-web-vitals',
-      'next/typescript',
-      'plugin:prettier/recommended',
-      'plugin:@tanstack/eslint-plugin-query/recommended',
-    ],
-    plugins: ['eslint-plugin-import-helpers', '@tanstack/query'],
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  {
+    plugins: {
+      'import-helpers': importHelpersPlugin,
+      prettier: prettierPlugin,
+      '@tanstack/query': pluginQuery,
+    },
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-empty-object-type': 'off',
@@ -31,7 +28,6 @@ const eslintConfig = [
         },
       ],
       'no-unused-vars': 'off',
-      'prettier/prettier': ['error', { endOfLine: 'auto' }],
       'react-hooks/exhaustive-deps': 'off',
       'import-helpers/order-imports': [
         'warn',
@@ -56,17 +52,22 @@ const eslintConfig = [
           alphabetize: { order: 'asc', ignoreCase: true },
         },
       ],
-      '@tanstack/query/exhaustive-deps': 'error',
-      '@tanstack/query/no-rest-destructuring': 'warn',
-      '@tanstack/query/stable-query-client': 'error',
-    },
-  }),
-  {
-    files: ['src/lib/react-query/query-client.ts'],
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
-];
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    'jest.config.js',
+    'jest.setup.js',
+    '__mocks__/**',
+    'tests/**',
+    '**/*.test.ts',
+    '**/*.test.tsx',
+  ]),
+]);
 
 export default eslintConfig;

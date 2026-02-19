@@ -1,8 +1,9 @@
 'use client';
 
-import type { Variants } from 'motion/react';
 import type { HTMLAttributes } from 'react';
 import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
+
+import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
 
 import { cn } from '@/lib/utils';
@@ -56,7 +57,7 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [controls, onMouseEnter]
+      [controls, onMouseEnter],
     );
 
     const handleMouseLeave = useCallback(
@@ -67,7 +68,7 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [controls, onMouseLeave]
+      [controls, onMouseLeave],
     );
     return (
       <div
@@ -117,7 +118,7 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 MenuIcon.displayName = 'MenuIcon';

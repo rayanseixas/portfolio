@@ -1,8 +1,9 @@
 'use client';
 
-import type { Variants } from 'motion/react';
 import type { HTMLAttributes } from 'react';
 import { forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
+
+import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
 
 import { cn } from '@/lib/utils';
@@ -79,7 +80,7 @@ const SparklesIcon = forwardRef<SparklesIconHandle, SparklesIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [onMouseEnter, sparkleControls, starControls]
+      [onMouseEnter, sparkleControls, starControls],
     );
 
     const handleMouseLeave = useCallback(
@@ -91,7 +92,7 @@ const SparklesIcon = forwardRef<SparklesIconHandle, SparklesIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [sparkleControls, starControls, onMouseLeave]
+      [sparkleControls, starControls, onMouseLeave],
     );
 
     return (
@@ -140,7 +141,7 @@ const SparklesIcon = forwardRef<SparklesIconHandle, SparklesIconProps>(
         </svg>
       </div>
     );
-  }
+  },
 );
 
 SparklesIcon.displayName = 'SparklesIcon';

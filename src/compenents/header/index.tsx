@@ -1,30 +1,38 @@
-'use client'
+'use client';
 
-import Button from "../button";
-import NavigationItem from "../navigation-item";
-import IconButton from "../icon-button";
-import { FileTextIcon } from "../icons/file-text";
-import { MenuIcon } from "../icons/menu";
-import { SparklesIcon } from "../icons/sparkles";
+import Button from '../button';
+import IconButton from '../icon-button';
+import { FileTextIcon } from '../icons/file-text';
+import { MenuIcon } from '../icons/menu';
+import { SparklesIcon } from '../icons/sparkles';
+import NavigationItem from '../navigation-item';
 
 interface HeaderProps {
   onToggleMenu: () => void;
 }
 
 export default function Header({ onToggleMenu }: HeaderProps) {
-    return(
-        <div className="flex border-b border-border h-12 items-center px-4 md:px-inner-md">
-            <div className="text-text-headline flex-1">Saynex</div>
-            <ul className="gap-3 text-text-headline hidden lg:flex flex-1 justify-center items-center">
-               <NavigationItem href="/">Trabalhos</NavigationItem>
-               <NavigationItem href="3"><SparklesIcon size={16}/>Nano</NavigationItem>
-               <NavigationItem href="3">Sobre</NavigationItem>
-               <NavigationItem href="/contato">Contato</NavigationItem>
-            </ul>
-            <div className="flex flex-1 items-center justify-end">
-                <Button><FileTextIcon className="text-text-headline" size={20}/>Curriculo</Button>
-                <IconButton onToggleMenu={onToggleMenu} ><MenuIcon className="text-text-headline" size={20}/></IconButton>
-            </div>
-        </div>
-    )
+  return (
+    <div className="border-border md:px-inner-md flex h-12 items-center border-b px-4">
+      <div className="text-text-headline flex-1">Saynex</div>
+      <ul className="text-text-headline hidden flex-1 items-center justify-center gap-3 lg:flex">
+        <NavigationItem href="/">Home</NavigationItem>
+        <NavigationItem href="/craft">
+          <SparklesIcon size={16} />
+          Craft
+        </NavigationItem>
+        <NavigationItem href="3">Sobre</NavigationItem>
+        <NavigationItem href="/contato">Contato</NavigationItem>
+      </ul>
+      <div className="flex flex-1 items-center justify-end">
+        <Button>
+          <FileTextIcon className="text-text-headline" size={20} />
+          Curriculo
+        </Button>
+        <IconButton onToggleMenu={onToggleMenu}>
+          <MenuIcon className="text-text-headline" size={20} />
+        </IconButton>
+      </div>
+    </div>
+  );
 }

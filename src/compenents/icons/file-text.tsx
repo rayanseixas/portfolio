@@ -7,6 +7,7 @@ import React, {
   useImperativeHandle,
   useRef,
 } from 'react';
+
 import { motion, useAnimation } from 'motion/react';
 
 import { cn } from '@/lib/utils';
@@ -42,7 +43,7 @@ const FileText = forwardRef<FileTextIconHandle, FileTextIconProps>(
           onMouseEnter?.(e);
         }
       },
-      [controls, onMouseEnter]
+      [controls, onMouseEnter],
     );
 
     const handleMouseLeave = useCallback(
@@ -53,7 +54,7 @@ const FileText = forwardRef<FileTextIconHandle, FileTextIconProps>(
           onMouseLeave?.(e);
         }
       },
-      [controls, onMouseLeave]
+      [controls, onMouseLeave],
     );
 
     return (
@@ -155,7 +156,7 @@ const FileText = forwardRef<FileTextIconHandle, FileTextIconProps>(
         </motion.svg>
       </div>
     );
-  }
+  },
 );
 
 FileText.displayName = 'FileTextIcon';
