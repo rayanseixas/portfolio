@@ -19,7 +19,7 @@ export default function Home() {
       </div>
       <div className="px-inner-md flex w-full flex-wrap gap-5">
         <CardCase link={'/craft/teste'} />
-        <DialogScrollableContent />
+        <CardCase link={'/craft/artigo-01'} />
       </div>
     </div>
   );
