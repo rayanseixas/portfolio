@@ -24,9 +24,8 @@ export default function Header({ onToggleMenu }: HeaderProps) {
         <NavigationItem href="3">Sobre</NavigationItem>
         <NavigationItem href="/contato">Contato</NavigationItem>
       </ul>
-      <div className="flex flex-1 items-center justify-end">
-        <Button>
-          <FileTextIcon className="text-text-headline" size={20} />
+      <div className="flex flex-1 items-center justify-end gap-2">
+        <Button variant="ghost" size="md" icon={<FileTextIcon className="text-text-headline" size={20} />} iconPosition="left">
           Curriculo
         </Button>
         <IconButton onToggleMenu={onToggleMenu}>

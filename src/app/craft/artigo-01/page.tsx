@@ -1,3 +1,4 @@
+import ArticleBackButton from "@/src/compenents/article/article-back-button";
 import ArticleContentContainer from "@/src/compenents/article/article-content-container";
 import ArticleText from "@/src/compenents/article/article-text";
 import Divider from "@/src/compenents/divider";
@@ -5,8 +6,9 @@ import Image from "next/image";
 
 export default function Artigo01() {
   return (
-    <div className="no-scrollbar flex max-h-screen min-w-screen flex-col items-center overflow-y-auto ">
-          <ArticleContentContainer>
+    <div className="no-scrollbar relative flex max-h-screen min-w-screen flex-col items-center overflow-y-auto">
+      <ArticleBackButton />
+      <ArticleContentContainer>
             <h1 className="text-text-headline font-tertiary text-6xl leading-16">
               Lorem ipsum amet
             </h1>
