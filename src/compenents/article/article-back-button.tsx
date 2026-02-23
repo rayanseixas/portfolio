@@ -1,10 +1,8 @@
 'use client';
 
-import { ArrowLeft } from 'lucide-react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-
-import Button from '@/src/compenents/button';
 import { CornerUpLeftIcon } from '../icons/corner-up-left';
 
 const ROUTE_LABELS: Record<string, string> = {
@@ -30,11 +28,6 @@ function formatLabel(raw: string): string {
   return raw.charAt(0).toUpperCase() + raw.slice(1).toLowerCase();
 }
 
-/**
- * Botão padrão para artigos em /cases: volta para a página anterior (history.back).
- * Exibe o nome da página de origem (ex: "Cases" se veio de /cases).
- * Deve ser posicionado fixo à esquerda do título, alinhado ao topo.
- */
 export default function ArticleBackButton() {
   const router = useRouter();
   const [label, setLabel] = useState<string>('Voltar');
@@ -44,17 +37,14 @@ export default function ArticleBackButton() {
   }, []);
 
   return (
-    <Button
+    <button
       type="button"
-      variant="ghost"
-      size="md"
-      iconPosition="left"
-      icon={<CornerUpLeftIcon className="text-[var(--color-text-headline)]" size={20} />}
       onClick={() => router.back()}
       aria-label={`Voltar para ${label}`}
-      className="fixed left-24 top-[3.75rem] z-10"
+      className="fixed left-6 top-6 z-10 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-sm font-medium text-foreground shadow-sm backdrop-blur"
     >
-      {label}
-    </Button>
+      <CornerUpLeftIcon className="text-[var(--color-text-headline)]" size={20} />
+      <span>{label}</span>
+    </button>
   );
 }
