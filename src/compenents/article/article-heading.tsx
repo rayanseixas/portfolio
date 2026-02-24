@@ -41,14 +41,14 @@ function buildHeadingClasses(
 
   switch (variant) {
     case 'hero':
-      baseClasses = 'text--text-headline tracking-tight';
+      baseClasses = 'text-text-headline tracking-tight';
       sizeClasses =
         size === 'sm'
           ? 'text-3xl md:text-4xl'
           : 'text-4xl md:text-5xl';
       break;
     case 'section':
-      baseClasses = 'text--text-headline mt-8';
+      baseClasses = 'text-text-headline mt-8';
       sizeClasses =
         size === 'sm'
           ? 'text-xl md:text-2xl'
@@ -56,7 +56,7 @@ function buildHeadingClasses(
       break;
     case 'eyebrow':
       baseClasses =
-        'text--text-body uppercase tracking-[0.2em]';
+        'text-text-body uppercase tracking-[0.2em]';
       sizeClasses =
         size === 'sm'
           ? 'text-xs md:text-sm'
