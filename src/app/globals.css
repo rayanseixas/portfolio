@@ -79,7 +79,6 @@
 body {
   background: var(--color-surface-default);
   font-family: var(--font-primary);
-  color: var(--color-white-500);
+  /* color: var(--color-white-500); */
   overflow-y: hidden;
 }
-
