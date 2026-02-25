@@ -78,5 +78,5 @@
 body {
   background: var(--color-surface-default);
   font-family: var(--font-primary);
-  overflow-y: hidden;
+
 }

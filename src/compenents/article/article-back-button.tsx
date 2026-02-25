@@ -43,7 +43,7 @@ export default function ArticleBackButton() {
       aria-label={`Voltar para ${label}`}
       className="fixed left-6 top-6 z-10 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-sm font-medium text-foreground shadow-sm backdrop-blur"
     >
-      <CornerUpLeftIcon className="text-[var(--color-text-headline)]" size={20} />
+      <CornerUpLeftIcon className="text-(--color-text-headline)" size={20} />
       <span>{label}</span>
     </button>
   );
