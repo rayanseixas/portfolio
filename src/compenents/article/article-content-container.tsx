@@ -5,5 +5,5 @@ type ArticleContentContainerProps = {
 export default function ArticleContentContainer({
   children,
 }: ArticleContentContainerProps) {
-  return <div className="mt-12 mb-40 max-w-[900px] p-3">{children}</div>;
+  return <div className="mt-12 mb-40 w-[900px] p-3">{children}</div>;
 }

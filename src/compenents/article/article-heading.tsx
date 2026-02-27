@@ -7,7 +7,7 @@ const heading = tv({
   variants: {
     variant: {
       hero: 'text-text-headline tracking-tight',
-      section: 'text-text-headline mt-10',
+      section: 'text-text-headline mt-12',
       eyebrow: 'text-text-body uppercase tracking-[0.2em]',
     },
     size: {
@@ -19,7 +19,7 @@ const heading = tv({
     {
       variant: 'hero',
       size: 'md',
-      class: 'text-4xl md:text-5xl',
+      class: 'text-2xl md:text-[32px]',
     },
     {
       variant: 'hero',
@@ -29,12 +29,12 @@ const heading = tv({
     {
       variant: 'section',
       size: 'md',
-      class: 'text-xl md:text-xl',
+      class: 'text-xl md:text-2xl',
     },
     {
       variant: 'section',
       size: 'sm',
-      class: 'text-xl md:text-2xl',
+      class: 'text-xl md:text-xl',
     },
     {
       variant: 'eyebrow',

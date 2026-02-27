@@ -1,0 +1,27 @@
+import ArticleContentContainer from "@/src/compenents/article/article-content-container";
+import ArticleDivider from "@/src/compenents/article/article-divider";
+import { ArticleHeading } from "@/src/compenents/article/article-heading";
+import ArticleText from "@/src/compenents/article/article-text";
+
+export default function Project01() {
+  return (
+    <main className="flex min-h-screen justify-center  ">
+      <ArticleContentContainer>
+        <ArticleDivider />
+        <div>
+          <ArticleHeading variant="hero" size="md">Lorem ipsum</ArticleHeading>
+          <ArticleText>@ryanseixas | 08 Fev, 2026 (Há 1 dia)</ArticleText>
+        </div>
+        <div>
+          <ArticleHeading variant="section" size="sm">What is Lorem Ipsum?</ArticleHeading>
+          <ArticleText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ArticleText>
+        </div>
+        <div>
+          <ArticleHeading variant="section" size="sm">Resumo</ArticleHeading>
+          <ArticleText>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ArticleText>
+        </div>
+        <div className="bg-surface-subtle-active w-full h-[400px] mt-8"></div>
+      </ArticleContentContainer>
+    </main>
+  );
+}
