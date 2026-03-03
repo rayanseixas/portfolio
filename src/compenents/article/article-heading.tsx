@@ -1,54 +1,24 @@
 import { tv, type VariantProps } from 'tailwind-variants';
 
-type HeadingHierarchy = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HeadingHierarchy =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6';
 
 const heading = tv({
-  base: '',
+  base: 'text-text-headline font-secondary font-medium tracking-tight',
   variants: {
-    variant: {
-      hero: 'text-text-headline tracking-tight',
-      section: 'text-text-headline mt-12',
-      eyebrow: 'text-text-body uppercase tracking-[0.2em]',
-    },
     size: {
-      md: '',
-      sm: '',
+      xl: 'text-[40px] leading-[1.1]',
+      lg: 'text-[32px] leading-[1.15]',
+      md: 'text-[24px] leading-[1.2] mt-12',
+      sm: 'text-[20px] leading-[1.3]',
     },
   },
-  compoundVariants: [
-    {
-      variant: 'hero',
-      size: 'md',
-      class: 'text-2xl md:text-[32px]',
-    },
-    {
-      variant: 'hero',
-      size: 'sm',
-      class: 'text-3xl md:text-4xl',
-    },
-    {
-      variant: 'section',
-      size: 'md',
-      class: 'text-xl md:text-2xl',
-    },
-    {
-      variant: 'section',
-      size: 'sm',
-      class: 'text-xl md:text-xl',
-    },
-    {
-      variant: 'eyebrow',
-      size: 'md',
-      class: 'text-sm md:text-base',
-    },
-    {
-      variant: 'eyebrow',
-      size: 'sm',
-      class: 'text-xs md:text-sm',
-    },
-  ],
   defaultVariants: {
-    variant: 'hero',
     size: 'md',
   },
 });
@@ -59,23 +29,16 @@ type ArticleHeadingProps = {
   className?: string;
 } & VariantProps<typeof heading>;
 
-function getDefaultHierarchy(variant: NonNullable<ArticleHeadingProps['variant']>): HeadingHierarchy {
-  if (variant === 'section') return 'h2';
-  if (variant === 'eyebrow') return 'h3';
-  return 'h1';
-}
-
 export function ArticleHeading({
-  hierarchy,
-  variant,
+  hierarchy = 'h2',
   size,
   children,
   className,
 }: ArticleHeadingProps) {
-  const Tag = hierarchy ?? getDefaultHierarchy(variant ?? 'hero');
+  const Tag = hierarchy;
 
   return (
-    <Tag className={heading({ variant, size, className })}>
+    <Tag className={heading({ size, className })}>
       {children}
     </Tag>
   );

@@ -1,5 +1,5 @@
 import './globals.css';
-import { Inter } from 'next/font/google'
+import { Inter, Architects_Daughter } from 'next/font/google'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,6 +13,12 @@ const primary = Inter({
   variable: '--font-primary',
 })
 
+const secondary = Architects_Daughter({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-secondary',
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`min-h-screen bg-background text-foreground antialiased ${primary.className}`}>
+      <body className={`min-h-screen bg-background text-foreground antialiased ${primary.variable} ${secondary.variable}`}>
         {children}
       </body>
     </html>
