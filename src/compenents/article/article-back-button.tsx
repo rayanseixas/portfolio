@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
 import { useRouter } from 'next/navigation';
+import React from 'react';
 import { useEffect, useState } from 'react';
+
 import { CornerUpLeftIcon } from '../icons/corner-up-left';
 
 const ROUTE_LABELS: Record<string, string> = {
@@ -18,7 +19,11 @@ function getPreviousPageLabel(): string {
     const url = new URL(document.referrer || '');
     if (url.origin !== window.location.origin) return 'Voltar';
     const path = url.pathname.replace(/\/$/, '') || '/';
-    return ROUTE_LABELS[path] ?? path.slice(1).split('/')[0]?.replace(/-/g, ' ') ?? 'Voltar';
+    return (
+      ROUTE_LABELS[path] ??
+      path.slice(1).split('/')[0]?.replace(/-/g, ' ') ??
+      'Voltar'
+    );
   } catch {
     return 'Voltar';
   }
@@ -41,7 +46,7 @@ export default function ArticleBackButton() {
       type="button"
       onClick={() => router.back()}
       aria-label={`Voltar para ${label}`}
-      className="fixed left-6 top-6 z-10 inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-sm font-medium text-foreground shadow-sm backdrop-blur"
+      className="border-border bg-background/80 text-foreground fixed top-6 left-6 z-10 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium shadow-sm backdrop-blur"
     >
       <CornerUpLeftIcon className="text-(--color-text-headline)" size={20} />
       <span>{label}</span>

@@ -2,11 +2,10 @@ type ArticleDividerProps = {
   className?: string;
 };
 
-export default function ArticleDivider({ className }: ArticleDividerProps) {
+export function ArticleDivider({ className }: ArticleDividerProps) {
   return (
-    <div className={['py-inner-xl', className].filter(Boolean).join(' ')}>
-      <div className="h-px w-full bg-border" />
+    <div className={['py-inner-lg', className].filter(Boolean).join(' ')}>
+      <div className="bg-border h-px w-full" />
     </div>
   );
 }
-

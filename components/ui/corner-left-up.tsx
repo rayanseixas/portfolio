@@ -9,10 +9,10 @@ import { motion, useAnimation } from 'motion/react';
 import { cn } from '@/lib/utils';
 
 const STRETCH_VARIANTS: Variants = {
-  normal: { scaleX: 1, x: 0, opacity: 1 },
+  normal: { scaleY: 1, y: 0, opacity: 1 },
   animate: {
-    scaleX: [1, 1.15, 1],
-    x: [0, -2, 0],
+    scaleY: [1, 1.15, 1],
+    y: [0, -2, 0],
     transition: {
       duration: 0.45,
       ease: 'easeInOut',
@@ -20,18 +20,18 @@ const STRETCH_VARIANTS: Variants = {
   },
 };
 
-export interface CornerUpLeftIconHandle {
+export interface CornerLeftUpIconHandle {
   startAnimation: () => void;
   stopAnimation: () => void;
 }
 
-interface CornerUpLeftIconProps extends HTMLAttributes<HTMLDivElement> {
+interface CornerLeftUpIconProps extends HTMLAttributes<HTMLDivElement> {
   size?: number;
 }
 
-const CornerUpLeftIcon = forwardRef<
-  CornerUpLeftIconHandle,
-  CornerUpLeftIconProps
+const CornerLeftUpIcon = forwardRef<
+  CornerLeftUpIconHandle,
+  CornerLeftUpIconProps
 >(({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
   const controls = useAnimation();
   const isControlledRef = useRef(false);
@@ -87,13 +87,13 @@ const CornerUpLeftIcon = forwardRef<
         width={size}
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M20 20v-7a4 4 0 0 0-4-4H4" />
-        <path d="M9 14 4 9l5-5" />
+        <path d="M14 9 9 4 4 9" />
+        <path d="M20 20h-7a4 4 0 0 1-4-4V4" />
       </motion.svg>
     </div>
   );
 });
 
-CornerUpLeftIcon.displayName = 'CornerUpLeftIcon';
+CornerLeftUpIcon.displayName = 'CornerLeftUpIcon';
 
-export { CornerUpLeftIcon };
+export { CornerLeftUpIcon };

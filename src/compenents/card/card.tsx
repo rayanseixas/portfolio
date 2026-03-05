@@ -1,14 +1,14 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 type CardProps = {
-
   href: string;
-}
+};
 
-export default function Card({  href }: CardProps) {
+export default function Card({ href }: CardProps) {
   return (
-    <Link href={href} className="flex flex-1 h-48 bg-surface-subtle-active p-4 min-w-[280px] rounded-sm">
-     
-    </Link>
+    <Link
+      href={href}
+      className="bg-surface-subtle-active flex h-48 min-w-[280px] flex-1 rounded-sm p-4"
+    ></Link>
   );
 }
