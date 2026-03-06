@@ -3,13 +3,13 @@ import { tv, type VariantProps } from 'tailwind-variants';
 type HeadingHierarchy = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 const heading = tv({
-  base: 'text-text-headline font-secondary font-medium tracking-tight',
+  base: 'text-text-headline font-primary text-justify font-medium tracking-tight',
   variants: {
     size: {
-      xl: 'text-[40px] leading-[1.1]',
-      lg: 'text-[32px] leading-[1.15]',
-      md: 'mt-12 text-[24px] leading-[1.2]',
-      sm: 'mt-12 text-[20px] leading-[1.3]',
+      xl: 'text-3xl leading-[1.1]',
+      lg: 'text-3xl leading-[1.15]',
+      md: 'mt-12 text-2xl leading-[1.2]',
+      sm: 'mt-12 text-xl leading-8',
     },
   },
   defaultVariants: {

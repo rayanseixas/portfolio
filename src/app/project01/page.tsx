@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import ArticleContentContainer from '@/src/compenents/article/article-content-container';
-import { ArticleDivider } from '@/src/compenents/article/article-divider';
 import { ArticleHeading } from '@/src/compenents/article/article-heading';
 import ArticleText from '@/src/compenents/article/article-text';
 import { Button } from '@/src/compenents/button';
@@ -10,22 +9,21 @@ import { CornerUpLeftIcon } from '@/src/compenents/icons/corner-up-left';
 export default function Project01() {
   return (
     <main className="flex min-h-screen justify-center">
+      <Button variant="ghost" className="fixed top-14 left-3">
+        <Link href={'/'} className="flex gap-2">
+          <CornerUpLeftIcon size={20} />
+          Voltar
+        </Link>
+      </Button>
       <ArticleContentContainer>
-        <Button variant="ghost">
-          <Link href={'/'} className="flex gap-2">
-            <CornerUpLeftIcon size={20} />
-            Voltar
-          </Link>
-        </Button>
-        <ArticleDivider />
         <div>
           <ArticleHeading hierarchy="h1" size="lg">
             Lorem ipsum
           </ArticleHeading>
-          <ArticleText>@ryanseixas | 08 Fev, 2026 (Há 1 dia)</ArticleText>
+          <ArticleText>@rayanseixas | 08 Fev, 2026 (Há 1 dia)</ArticleText>
         </div>
         <div>
-          <ArticleHeading hierarchy="h3" size="md">
+          <ArticleHeading hierarchy="h3" size="sm">
             What is Lorem Ipsum?
           </ArticleHeading>
           <ArticleText>
@@ -41,7 +39,7 @@ export default function Project01() {
           </ArticleText>
         </div>
         <div>
-          <ArticleHeading hierarchy="h3" size="md">
+          <ArticleHeading hierarchy="h3" size="sm">
             Resumo
           </ArticleHeading>
           <ArticleText>
